@@ -72,21 +72,21 @@ python "Image Process.py" --input ./raw_data/sample.jpg --output ./data/processe
 python Train_pipeline.py --data_path ./data/processed --label_path ./data/labels --epochs 300
 ```
 ## Density Map Generation (Post-Analysis)
-# Step 1: Generate density grid data (Patch-wise inference with Global NMS)
+### Step 1: Generate density grid data (Patch-wise inference with Global NMS)
 ```bash
 python density_map_generator.py
 ```
-# Step 2: Generate Density Heatmap (Post-analysis visualization)
+### Step 2: Generate Density Heatmap (Post-analysis visualization)
 ```bash
 python "Density Image process.py" --image ./result/sample_preview.jpg --vmin 3 --vmax 30
 ```
 
-## 2. Interactive GUI Tools (Object Detection Labeler)
+## 2_1 Interactive GUI Tools (Object Detection Labeler)
 ```bash
 python "YOLO Eosin LabelEditer.py"
 ```
 
-## 2. Interactive GUI Tools (Hyperspectral Viewer)
+## 2_2 Interactive GUI Tools (Hyperspectral Viewer)
 ```bash
 python "YOLO Eosin Hyperspectral Viewer.py"
 ```
