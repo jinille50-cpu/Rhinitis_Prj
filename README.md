@@ -64,7 +64,7 @@ This project provides a complete pipeline from raw image processing to deep lear
 Execute the following commands in your terminal to process data or train the model.
 
 **Data Preparation (Patch Processing)**
-```bash
+
 python "Image Process.py" --input ./raw_data/sample.jpg --output ./data/processed --base_name Sample_Day
 
 ## Run the end-to-end training pipeline including dataset splitting and YAML configuration.
