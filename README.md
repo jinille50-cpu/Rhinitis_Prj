@@ -48,6 +48,10 @@ This module visualizes the spatial distribution of Eosinophils by generating hea
 - **Alpha Blending:** Overlays heatmap onto original H&E images with adjustable transparency.
 - **Colorbar Integration:** Generates publication-ready figures with calibrated color scales.
 
+
+# Data Privacy & Security:
+The datasets used in this project are the property of Boramae Medical Center and are subject to strict confidentiality agreements. Therefore, raw data is not included in this repository.
+The screenshots provided are for demonstration purposes of the software functionality only."
 **How to Run:**
 
 How to Run & Interactive Tools
@@ -57,13 +61,13 @@ This project provides a complete pipeline from raw image processing to deep lear
 ### 1. Core Pipelines (CLI)
 Execute the following commands in your terminal to process data or train the model.
 
-# Data Preparation (Patch Processing)
+## Data Preparation (Patch Processing)
 python "Image Process.py" --input ./raw_data/sample.jpg --output ./data/processed --base_name B_0326
 
-# Run the end-to-end training pipeline including dataset splitting and YAML configuration.
+## Run the end-to-end training pipeline including dataset splitting and YAML configuration.
 python Train_pipeline.py --data_path ./data/processed --label_path ./data/labels --epochs 300
 
-# Density Map Generation (Post-Analysis)
+## Density Map Generation (Post-Analysis)
 python "Density Image process.py" --image ./result/sample_scaled.jpg --vmin 3 --vmax 30
 
 
@@ -74,6 +78,7 @@ python "YOLO Eosin LabelEditer.py"
 
 python "Hyperspectral Viewer.py" --file ./data/sample.hsi
 # Hyperspectral Viewer
-<img width="1602" height="966" alt="image" src="https://github.com/user-attachments/assets/1a51b074-ccdc-4d7f-ac63-2ba31aa80069" />
+<img width="1602" height="966" alt="image" src="https://github.com/user-attachments/assets/ee106ecd-86a6-4083-b4d4-8dbab024e749" />
+
 
 
