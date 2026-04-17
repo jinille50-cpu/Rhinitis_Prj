@@ -81,12 +81,12 @@ python "Density Image process.py" --image ./result/sample_preview.jpg --vmin 3 -
 ## 2. Interactive GUI Tools
 python "YOLO Eosin LabelEditer.py"
 # Yolo Label Editer
-<img width="1402" height="966" alt="image" src="https://github.com/user-attachments/assets/e2d6d1d1-01e0-48df-badf-88bcc54273e8" />
+# <img width="1402" height="966" alt="image" src="https://github.com/user-attachments/assets/e2d6d1d1-01e0-48df-badf-88bcc54273e8" />
 
 
 python "Hyperspectral Viewer.py" --file ./data/sample.hsi
 # Hyperspectral Viewer
-<img width="1602" height="966" alt="image" src="https://github.com/user-attachments/assets/ee106ecd-86a6-4083-b4d4-8dbab024e749" />
+# <img width="1602" height="966" alt="image" src="https://github.com/user-attachments/assets/ee106ecd-86a6-4083-b4d4-8dbab024e749" />
 
 
 
