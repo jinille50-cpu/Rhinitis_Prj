@@ -29,7 +29,6 @@ This project is designed with a modular architecture for scalability and ease of
 
 ### 3. Data Processing & Utilities
 - `image_process.py`: Image preprocessing suite (Crop, Data Normalization, Augmentation).
-- `cv_utils.py`: Essential computer vision utility functions (filtering, color space conversion).
 - `file_utils.py`: File system management and automation for batch processing.
 - `label_editor.py`: Utility for refining and correcting Ground Truth labels.
 
