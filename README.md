@@ -38,17 +38,42 @@ This project is designed with a modular architecture for scalability and ease of
 ---
 
 
-### 1. Requirements
-pip install -r requirements.txt
-
-### 2. Run Inference
-python predict.py --input ./data/sample.png --weights ./models/best.pt
-
-python image_process.py --input ./raw_data --output ./processed_data --normalize
-
-python yolo_train.py --config config/yolo_cfg.yaml --epochs 100
 
 # Performs patch-wise inference and generates density maps
-python patch_prediction.py --input ./test_images --output ./results
+### Density Heatmap Generation
+This module visualizes the spatial distribution of Eosinophils by generating heatmaps from grid-based prediction data.
 
-python hyperspectral_viewer.py --file ./data/sample.hsi
+**Key Features:**
+- **Absolute Scaling:** Ensures consistent visualization across multiple samples (Default range: 3 to 30 counts).
+- **Alpha Blending:** Overlays heatmap onto original H&E images with adjustable transparency.
+- **Colorbar Integration:** Generates publication-ready figures with calibrated color scales.
+
+**How to Run:**
+
+How to Run & Interactive Tools
+
+This project provides a complete pipeline from raw image processing to deep learning training and interactive visualization.
+
+### 1. Core Pipelines (CLI)
+Execute the following commands in your terminal to process data or train the model.
+
+# Data Preparation (Patch Processing)
+python "Image Process.py" --input ./raw_data/sample.jpg --output ./data/processed --base_name B_0326
+
+# Run the end-to-end training pipeline including dataset splitting and YAML configuration.
+python Train_pipeline.py --data_path ./data/processed --label_path ./data/labels --epochs 300
+
+# Density Map Generation (Post-Analysis)
+python "Density Image process.py" --image ./result/sample_scaled.jpg --vmin 3 --vmax 30
+
+
+python "YOLO Eosin LabelEditer.py"
+# Yolo Label Editer
+<img width="1402" height="966" alt="image" src="https://github.com/user-attachments/assets/e2d6d1d1-01e0-48df-badf-88bcc54273e8" />
+
+
+python "Hyperspectral Viewer.py" --file ./data/sample.hsi
+# Hyperspectral Viewer
+<img width="1602" height="966" alt="image" src="https://github.com/user-attachments/assets/1a51b074-ccdc-4d7f-ac63-2ba31aa80069" />
+
+
