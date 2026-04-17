@@ -64,22 +64,32 @@ This project provides a complete pipeline from raw image processing to deep lear
 Execute the following commands in your terminal to process data or train the model.
 
 **Data Preparation (Patch Processing)**
-
+```bash
 python "Image Process.py" --input ./raw_data/sample.jpg --output ./data/processed --base_name Sample_Day
-
+```
 ## Run the end-to-end training pipeline including dataset splitting and YAML configuration.
+```bash
 python Train_pipeline.py --data_path ./data/processed --label_path ./data/labels --epochs 300
-
+```
 ## Density Map Generation (Post-Analysis)
 # Step 1: Generate density grid data (Patch-wise inference with Global NMS)
+```bash
 python density_map_generator.py
-
+```
 # Step 2: Generate Density Heatmap (Post-analysis visualization)
+```bash
 python "Density Image process.py" --image ./result/sample_preview.jpg --vmin 3 --vmax 30
+```
 
-
-## 2. Interactive GUI Tools
+## 2. Interactive GUI Tools (Object Detection Labeler)
+```bash
 python "YOLO Eosin LabelEditer.py"
+``
+
+## 2. Interactive GUI Tools (Hyperspectral Viewer)
+```bash
+python "YOLO Eosin Hyperspectral Viewer.py"
+````
 # Yolo Label Editer
 <img width="1402" height="966" alt="image" src="https://github.com/user-attachments/assets/e2d6d1d1-01e0-48df-badf-88bcc54273e8" />
 
