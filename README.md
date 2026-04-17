@@ -87,13 +87,13 @@ python "Density Image process.py" --image ./result/sample_preview.jpg --vmin 3 -
 ```bash
 python "YOLO Eosin LabelEditer.py"
 ```
-<img width="1402" height="966" src="..."/>
+<img width="1402" height="966" alt="image" src="https://github.com/user-attachments/assets/e2d6d1d1-01e0-48df-badf-88bcc54273e8" />
 
 **Hyperspectral Viewer**
 ```bash
 python "Hyperspectral Viewer.py"
 ```
-<img width="1602" height="966" src="..."/>
+<img width="1602" height="966" alt="image" src="https://github.com/user-attachments/assets/ee106ecd-86a6-4083-b4d4-8dbab024e749" />
 
 ## 3. Segmentation Pipeline
 
