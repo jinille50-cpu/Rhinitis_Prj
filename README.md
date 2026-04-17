@@ -1,8 +1,8 @@
 # Hybrid YOLO-Segformer Pipeline for Precision Vision Analysis
 
 YOLO, Segmenation, Image process
-# Department of Otorhinolaryngology-Head and Neck Surgery, Boramae Medical Center
-# Kookmin University
+### Department of Otorhinolaryngology-Head and Neck Surgery, Boramae Medical Center
+### Kookmin University
 
 Auto-GT Generation
 
