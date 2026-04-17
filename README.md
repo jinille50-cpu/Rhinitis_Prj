@@ -61,42 +61,56 @@ Performs patch-wise inference and visualizes the spatial distribution of Eosinop
 This project provides a complete pipeline from raw image processing to deep learning training and interactive visualization.
 
 ## 1. Core Pipelines (CLI)
-Execute the following commands in your terminal to process data or train the model.
 
 **Data Preparation (Patch Processing)**
 ```bash
 python "Image Process.py" --input ./raw_data/sample.jpg --output ./data/processed --base_name Sample_Day
 ```
-## Run the end-to-end training pipeline including dataset splitting and YAML configuration.
+
+**End-to-end Training (dataset splitting + YAML configuration)**
 ```bash
 python Train_pipeline.py --data_path ./data/processed --label_path ./data/labels --epochs 300
 ```
-## Density Map Generation (Post-Analysis)
-### Step 1: Generate density grid data (Patch-wise inference with Global NMS)
+
+**Density Map Generation**
 ```bash
+# Step 1: Patch-wise inference with Global NMS
 python density_map_generator.py
-```
-### Step 2: Generate Density Heatmap (Post-analysis visualization)
-```bash
+
+# Step 2: Heatmap visualization
 python "Density Image process.py" --image ./result/sample_preview.jpg --vmin 3 --vmax 30
 ```
 
-## 2_1 Interactive GUI Tools (Object Detection Labeler)
+## 2. Interactive GUI Tools
+
+**Object Detection Labeler**
 ```bash
 python "YOLO Eosin LabelEditer.py"
 ```
+<img width="1402" height="966" src="..."/>
 
-## 2_2 Interactive GUI Tools (Hyperspectral Viewer)
+**Hyperspectral Viewer**
 ```bash
-python "YOLO Eosin Hyperspectral Viewer.py"
+python "Hyperspectral Viewer.py"
 ```
-# Yolo Label Editer
-<img width="1402" height="966" alt="image" src="https://github.com/user-attachments/assets/e2d6d1d1-01e0-48df-badf-88bcc54273e8" />
+<img width="1602" height="966" src="..."/>
+
+## 3. Segmentation Pipeline
+
+```bash
+# Stage 1: K-Fold cross-validation (find optimal epoch)
+python "Kfold Segmentation.py"
+
+# Stage 2: Full data training
+python "Segmentation_Train_Module_Full_Data.py"
+
+# Stage 3: Evaluate & export figures
+python "Segmentation Results.py"
+```
 
 
-python "Hyperspectral Viewer.py" --file ./data/sample.hsi
-# Hyperspectral Viewer
-<img width="1602" height="966" alt="image" src="https://github.com/user-attachments/assets/ee106ecd-86a6-4083-b4d4-8dbab024e749" />
+
+
 
 
 
